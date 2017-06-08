@@ -1,0 +1,28 @@
+# global config
+# auther: Gan Huang
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# Important, do not modify any parameters
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+QE_STOP_TIME_LIMIT: 86400 # 24 hours
+QE_DELETE_STOPPED_TIME_LIMIT: 14400 # 4 hours
+NOQE_STOP_TIME_LIMIT: 201600 # 56 hours
+NOQE_DELETE_STOPPED_TIME_LIMIT: 14400 # 4 hours
+# IAAS_LIST can be a list
+IAAS_LIST: [os_name]
+INSTANCE_WHITE_LIST_KEYWORDS: [slave, preserve]
+# used for email
+EMAIL_SUBJECT: "Long running instances on OpenStack"
+INSTANCE_RUNNING_THRESHOLD: 432000 # 5 days
+INSTANCE_WHITE_LIST_KEYWORDS_FOR_REPORT: [slave]
+EMAIL_TO: ['xxxx@redhat.com']
+EMAIL_FROM: qe-jenkins
+EMAIL_SERVER: "xxxx.com" 
+# dry run
+DRY_RUN: True
+
+# credentials for OpenStack
+os_name:
+  OS_USERNAME: 
+  OS_TENANT_NAME: 
+  OS_PASSWORD:
+  OS_AUTH_URL: 
