@@ -29,7 +29,7 @@ class OpenStackAPI():
     def get_server_type(self, flavor_id):
         return self.conn.compute.get_flavor(flavor_id).name
 
-# TODO: send email to aos-qe@redhat.com periodically for long-running instance with "preserve" tags
+# TODO: send email periodically for long-running instance with "preserve" tags
 def sendMail(FROM, TO, SUBJECT, TEXT, SERVER):
     """this is some test documentation in the function"""
     message = textwrap.dedent("""\
@@ -38,7 +38,6 @@ To: %s
 Subject: %s
 
 Please terminate following instances if no longer needed.
-How instances are pruned: https://mojo.redhat.com/docs/DOC-1077295
 
 Please adjust the instance flavor accordingly for saving resources.
 vm_type: m1.small/m1.medium/m1.large
